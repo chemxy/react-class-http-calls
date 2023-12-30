@@ -1,29 +1,73 @@
-const bodyParser = require('body-parser');
-const express = require('express');
+import fs from 'node:fs/promises';
 
-const eventRoutes = require('./routes/events');
-const authRoutes = require('./routes/auth');
+import bodyParser from 'body-parser';
+import express from 'express';
 
 const app = express();
 
+app.use(express.static('images'));
 app.use(bodyParser.json());
+
+import jwt from 'jsonwebtoken'
+
+// CORS
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PATCH,DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
-  next();
+    res.setHeader('Access-Control-Allow-Origin', '*'); // allow all domains
+    res.setHeader('Access-Control-Allow-Methods', 'GET, PUT');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+    next();
 });
 
-app.use(authRoutes);
+app.get('/login', async (req, res) => {
+    let token;
+    try {
+        //Creating jwt token
+        token = jwt.sign(
+            {username: "sampleusername", password: "samplepass"},
+            "expressjs",
+            {expiresIn: "1h"}
+        );
+    } catch (err) {
+        console.log(err);
+        const error = new Error("Error! Something went wrong with the authentication.");
+        return next(error);
+    }
 
-app.use('/events', eventRoutes);
+    res.status(200).json({message: 'authenticated', token: token})
+})
 
-app.use((error, req, res, next) => {
-  const status = error.status || 500;
-  const message = error.message || 'Something went wrong.';
-  res.status(status).json({ message: message });
+app.get('/places', async (req, res) => {
+    const fileContent = await fs.readFile('./data/places.json');
+
+    const placesData = JSON.parse(fileContent);
+
+    res.status(200).json({places: placesData});
 });
 
-const port = 8080;
-console.log("start listening to port " + port);
-app.listen(port);
+app.get('/user-places', async (req, res) => {
+    const fileContent = await fs.readFile('./data/user-places.json');
+
+    const places = JSON.parse(fileContent);
+
+    res.status(200).json({places});
+});
+
+app.put('/user-places', async (req, res) => {
+    const places = req.body.places;
+
+    await fs.writeFile('./data/user-places.json', JSON.stringify(places));
+
+    res.status(200).json({message: 'User places updated!'});
+});
+
+// 404
+app.use((req, res, next) => {
+    if (req.method === 'OPTIONS') {
+        return next();
+    }
+    res.status(404).json({message: '404 - Not Found'});
+});
+
+console.log("listening to port 3200")
+app.listen(3200);
