@@ -9,18 +9,20 @@ import RootLayout from './pages/Root';
 import NewEvent from "./pages/NewEvent";
 
 const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <RootLayout/>,
-        errorElement: <ErrorPage/>,
-        children: [
-            {path: '/', element: <HomePage/>},
-            {path: 'events', element: <EventsPage/>},
-            {path: 'events/:eventId', element: <EventDetailPage/>},
-            {path: 'events/new', element: <NewEvent/>}
-        ],
-    },
-]);
+        {
+            path: '/',
+            element: <RootLayout/>,
+            errorElement: <ErrorPage/>,
+            children: [
+                {path: '', element: <HomePage/>},
+                {path: 'events', element: <EventsPage/>},
+                {path: 'events/:eventId', element: <EventDetailPage/>},
+                {path: 'events/new', element: <NewEvent/>},
+
+            ],
+        },
+    ])
+;
 
 function App() {
     return <RouterProvider router={router}/>;

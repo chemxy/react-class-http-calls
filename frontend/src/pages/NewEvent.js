@@ -1,4 +1,4 @@
-import { Form, json, redirect, useActionData, useNavigate, useNavigation } from 'react-router-dom';
+import { Form, json, useActionData, useNavigate } from 'react-router-dom';
 
 import classes from '../components/EventForm.module.css';
 

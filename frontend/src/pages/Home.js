@@ -1,11 +1,12 @@
-import PageContent from '../components/PageContent';
+import "../App.css";
 
 function HomePage() {
-  return (
-    <PageContent title="Welcome!">
-      <p>Browse all our amazing events!</p>
-    </PageContent>
-  );
+    return (
+        <div className="content">
+            <h1>Welcome!</h1>
+            <p>Browse all our amazing events!</p>
+        </div>
+    );
 }
 
 export default HomePage;
