@@ -22,6 +22,7 @@ async function get(id) {
     throw new NotFoundError('Could not find event for id ' + id);
   }
 
+  console.log(event)
   return event;
 }
 
