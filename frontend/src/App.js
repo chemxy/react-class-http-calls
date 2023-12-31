@@ -4,9 +4,9 @@ import ErrorPage from './pages/Error';
 import EventDetailPage from './pages/EventDetail';
 import EventsPage from './pages/Events';
 import HomePage from './pages/Home';
-import NewEventPage from './pages/NewEvent';
+import NewEvent from './pages/NewEvent';
 import RootLayout from './pages/Root';
-import NewEvent from "./pages/NewEvent";
+import AuthPage from "./pages/Auth";
 
 const router = createBrowserRouter([
         {
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
                 {path: 'events', element: <EventsPage/>},
                 {path: 'events/:eventId', element: <EventDetailPage/>},
                 {path: 'events/new', element: <NewEvent/>},
-
+                {path: 'auth', element: <AuthPage/>},
             ],
         },
     ])

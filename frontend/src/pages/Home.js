@@ -1,6 +1,7 @@
 import "../App.css";
 
 function HomePage() {
+
     return (
         <div className="content">
             <h1>Welcome!</h1>
