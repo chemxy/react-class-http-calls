@@ -1,28 +1,7 @@
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import ErrorPage from './pages/Error';
-import EventDetailPage from './pages/EventDetail';
-import EventsPage from './pages/Events';
-import HomePage from './pages/Home';
-import NewEvent from './pages/NewEvent';
-import RootLayout from './pages/Root';
-import AuthPage from "./pages/Auth";
 
-const router = createBrowserRouter([
-        {
-            path: '/',
-            element: <RootLayout/>,
-            errorElement: <ErrorPage/>,
-            children: [
-                {path: '', element: <HomePage/>},
-                {path: 'events', element: <EventsPage/>},
-                {path: 'events/:eventId', element: <EventDetailPage/>},
-                {path: 'events/new', element: <NewEvent/>},
-                {path: 'auth', element: <AuthPage/>},
-            ],
-        },
-    ])
-;
+const router = createBrowserRouter();
 
 function App() {
     return <RouterProvider router={router}/>;
