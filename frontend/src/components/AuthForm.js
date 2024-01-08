@@ -1,26 +1,15 @@
-import { useEffect, useState } from 'react';
-import { Form, json, useNavigate } from 'react-router-dom';
+import { useContext, useState } from 'react';
+import { Form, json } from 'react-router-dom';
 
 import classes from './AuthForm.module.css';
 import "../App.css";
+import { AuthContext, AUTHENTICATION_KEY } from "../store/AuthContext";
 
-const AUTHENTICATION_KEY = "authenticated";
 
 function AuthForm() {
     const [isLogin, setIsLogin] = useState(true);
-    const [authenticated, setAuthentication] = useState(false);
     const [signedUp, setSignedUp] = useState(false);
-    const navigate = useNavigate();
-
-    useEffect(() => {
-        const authenticatedCache = sessionStorage.getItem(AUTHENTICATION_KEY);
-        setAuthentication(authenticatedCache);
-    }, [])
-
-    function logout() {
-        setAuthentication(false);
-        sessionStorage.removeItem(AUTHENTICATION_KEY)
-    }
+    const auth = useContext(AuthContext);
 
     function switchAuthHandler() {
         setIsLogin((isCurrentlyLogin) => !isCurrentlyLogin);
@@ -57,7 +46,7 @@ function AuthForm() {
             }).then(() => {
                 console.log("logged in");
                 sessionStorage.setItem(AUTHENTICATION_KEY, true);
-                navigate('/');
+                auth.login();
             })
         } else { // signup  action
             const url = 'http://localhost:8080/signup';
@@ -82,36 +71,34 @@ function AuthForm() {
                 console.log("signed up successfully");
                 setSignedUp(true);
                 setIsLogin(true);
+                event.target.reset();
             })
         }
     }
 
-    if (!authenticated) {
-        return (
-            <div className="content">
-                {signedUp && <p>Signed up successfully</p>}
-                <Form onSubmit={submitForm} className={classes.form}>
-                    <h1>{isLogin ? 'Log in' : 'Create a new user'}</h1>
-                    <p>
-                        <label htmlFor="email">Email</label>
-                        <input id="email" type="email" name="email" required/>
-                    </p>
-                    <p>
-                        <label htmlFor="image">Password</label>
-                        <input id="password" type="password" name="password" required/>
-                    </p>
-                    <div className={classes.actions}>
-                        <button onClick={switchAuthHandler} type="button">
-                            {isLogin ? 'Create new user' : 'Switch to Login'}
-                        </button>
-                        <button type="submit">Continue</button>
-                    </div>
-                </Form>
-            </div>
-        );
-    } else {
-        return <button onClick={logout}> Log out</button>
-    }
+    return (
+        <div className="content">
+            {signedUp && <p>Signed up successfully</p>}
+            <Form onSubmit={submitForm} className={classes.form}>
+                <h1>{isLogin ? 'Log in' : 'Create a new user'}</h1>
+                <p>
+                    <label htmlFor="email">Email</label>
+                    <input id="email" type="email" name="email" required/>
+                </p>
+                <p>
+                    <label htmlFor="image">Password</label>
+                    <input id="password" type="password" name="password" required/>
+                </p>
+                <div className={classes.actions}>
+                    <button onClick={switchAuthHandler} type="button">
+                        {isLogin ? 'Create new user' : 'Switch to Login'}
+                    </button>
+                    <button type="submit">Continue</button>
+                </div>
+            </Form>
+        </div>
+    );
+
 
 }
 

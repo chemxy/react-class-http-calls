@@ -5,7 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d148c271-4b43-4513-89f4-58b421fad80a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../backend2/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend2/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/AdminPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/RootPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/events.json" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/events.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AuthForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AuthForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EventsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EventsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Authentication.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Error.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ErrorPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EventDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EventDetailPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Events.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EventsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/NewEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/NewEventPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Root.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +34,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2aHBbjzbQKQuQZAkazfe5k17meS" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -30,8 +49,8 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/github/react-class-http-calls/frontend/src",
+    "git-widget-placeholder": "completed",
+    "last_opened_file_path": "E:/github/react-class-http-calls/frontend/src/pages",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -42,7 +61,12 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\github\react-class-http-calls\frontend\src\pages" />
       <recent name="C:\github\react-class-http-calls\frontend\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\github\react-class-http-calls\frontend\src\components" />
+      <recent name="E:\github\react-class-http-calls\frontend\src\components\css" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -54,6 +78,8 @@
       <option name="presentableId" value="Default" />
       <updated>1703965698566</updated>
       <workItem from="1703965699710" duration="1017000" />
+      <workItem from="1704329936487" duration="144000" />
+      <workItem from="1704694001915" duration="2355000" />
     </task>
     <servers />
   </component>

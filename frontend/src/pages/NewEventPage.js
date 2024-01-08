@@ -2,7 +2,7 @@ import { Form, json, useActionData, useNavigate } from 'react-router-dom';
 
 import classes from '../components/EventForm.module.css';
 
-function NewEvent() {
+function NewEventPage() {
     const data = useActionData();
     const navigate = useNavigate();
 
@@ -99,5 +99,5 @@ function NewEvent() {
     );
 }
 
-export default NewEvent;
+export default NewEventPage;
 

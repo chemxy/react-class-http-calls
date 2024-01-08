@@ -1,11 +1,12 @@
 import "../App.css";
 import AuthForm from "../components/AuthForm";
 
-function AuthPage() {
+function LoginPage() {
+
 
     return (
         <AuthForm/>
     );
 }
 
-export default AuthPage;
+export default LoginPage;

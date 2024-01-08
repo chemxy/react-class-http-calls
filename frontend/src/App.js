@@ -1,24 +1,23 @@
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import ErrorPage from './pages/Error';
-import EventDetailPage from './pages/EventDetail';
-import EventsPage from './pages/Events';
-import HomePage from './pages/Home';
-import NewEvent from './pages/NewEvent';
-import RootLayout from './pages/Root';
-import AuthPage from "./pages/Auth";
+import ErrorPage from './pages/ErrorPage';
+import EventDetailPage from './pages/EventDetailPage';
+import EventsPage from './pages/EventsPage';
+import NewEventPage from './pages/NewEventPage';
+import RootPage from './pages/RootPage';
+import AdminPage from "./pages/AdminPage";
 
 const router = createBrowserRouter([
         {
             path: '/',
-            element: <RootLayout/>,
+            element: <RootPage/>,
             errorElement: <ErrorPage/>,
             children: [
-                {path: '', element: <HomePage/>},
+                {path: '', element: <EventsPage/>},
                 {path: 'events', element: <EventsPage/>},
                 {path: 'events/:eventId', element: <EventDetailPage/>},
-                {path: 'events/new', element: <NewEvent/>},
-                {path: 'auth', element: <AuthPage/>},
+                {path: 'events/new', element: <NewEventPage/>},
+                {path: 'admin', element: <AdminPage/>},
             ],
         },
     ])
