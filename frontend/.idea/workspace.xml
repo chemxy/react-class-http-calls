@@ -38,7 +38,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/github/react-class-http-calls/frontend/src/assets",
+    "last_opened_file_path": "C:/github/react-class-http-calls/frontend/src/components",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -49,6 +49,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\github\react-class-http-calls\frontend\src\components" />
+      <recent name="C:\github\react-class-http-calls\frontend\src\pages" />
       <recent name="C:\github\react-class-http-calls\frontend\src\assets" />
       <recent name="C:\github\react-class-http-calls\frontend\src" />
     </key>
