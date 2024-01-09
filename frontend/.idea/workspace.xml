@@ -7,7 +7,6 @@
     <list default="true" id="d148c271-4b43-4513-89f4-58b421fad80a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../backend/events.json" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/events.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

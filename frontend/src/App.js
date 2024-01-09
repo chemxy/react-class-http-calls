@@ -1,4 +1,4 @@
-effect import './App.css';
+import './App.css';
 import { useEffect, useState } from "react";
 import { json, Link } from "react-router-dom";
 
