@@ -1,0 +1,216 @@
+/*.form {*/
+/*  max-width: 40rem;*/
+/*  margin: 2rem auto;*/
+/*}*/
+
+/*.form label,*/
+/*.form input,*/
+/*.form textarea {*/
+/*  display: block;*/
+/*  width: 100%;*/
+/*}*/
+
+/*.form input,*/
+/*.form textarea {*/
+/*  font: inherit;*/
+/*  padding: 0.25rem;*/
+/*}*/
+
+/*.actions {*/
+/*  display: flex;*/
+/*  gap: 1rem;*/
+/*  justify-content: flex-end;*/
+/*  align-items: center;*/
+/*}*/
+
+/*.actions button {*/
+/*  font: inherit;*/
+/*  cursor: pointer;*/
+/*  padding: 0.5rem 1.5rem;*/
+/*  border-radius: 4px;*/
+/*  background-color: var(--color-gray-300);*/
+/*  color: var(--color-gray-800);*/
+/*  border: none;*/
+/*}*/
+
+/*.actions a {*/
+/*  text-decoration: none;*/
+/*  background-color: transparent;*/
+/*  color: var(--color-gray-300);*/
+/*}*/
+
+/*.actions button:hover {*/
+/*  background-color: var(--color-primary-300);*/
+/*}*/
+
+/*.actions a:hover {*/
+/*  background-color: var(--color-gray-800);*/
+/*}*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');
+
+html {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
+}
+
+.form_group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-bottom: 50px;
+}
+
+.form_field {
+    width: 100%;
+    border: 0;
+    /*border: 1px solid #d2d2d2;*/
+    /*border-radius: 8px;*/
+
+    border-bottom: 3px solid #d2d2d2;
+    border-bottom-color: #32612d;
+    outline: 0;
+    font-size: 16px;
+    color: #212121;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.form_field::placeholder {
+    color: transparent;
+}
+
+.form_field:placeholder-shown ~ .form_label {
+    font-size: 16px;
+    cursor: text;
+    top: 20px;
+}
+
+label,
+.form_field:focus ~ .form_label {
+    position: absolute;
+    top: 8px;
+    display: block;
+    transition: 0.2s;
+    font-size: 12px;
+    color: #9b9b9b;
+
+    /*padding: 0 5px;*/
+    /*background-color: white;*/
+    /*margin-left: 10px;*/
+}
+
+.form_field:focus ~ .form_label {
+    color: #32612d;
+}
+
+
+.app {
+    width: 70%;
+    margin: auto;
+    margin-top: 10vh;
+    border-radius: 40px;
+    background-color: white;
+}
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.flex_col {
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    width: 35%;
+    border-radius: 40px;
+    /*border-bottom-right-radius: 40px;*/
+    height: 80vh;
+    background-image: url("../assets/image.png");
+}
+
+.right {
+    width: 40%;
+    margin-left: 10%;
+}
+
+.title {
+    margin-top: 60px;
+}
+
+.h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #466d1d;
+    font-family: Ubuntu, serif;
+}
+
+.h2 {
+    font-size: 36px;
+    font-weight: lighter;
+    color: #354a21;
+    font-family: Roboto, serif;
+}
+
+.tabs {
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.tab_button {
+    border: 0;
+    background: transparent;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 10px 5px 10px;
+    margin-right: 20px;
+    color: #9b9b9b;
+}
+
+.tab_button_active {
+    border: 0;
+    font-size: 18px;
+    padding: 15px 10px 5px 10px;
+    border-bottom: 3px solid #354a21;
+    background: transparent;
+    margin-right: 20px;
+    color: #32612d;
+    font-weight: bold;
+}
+
+.tab_button:hover,
+.tab_button_active:hover {
+    cursor: pointer;
+}
+
+.buttons {
+    margin-top: 60px;
+}
+
+.button {
+    width: 100%;
+    padding: 12px 0;
+    border: 0;
+    background-color: #354a21;
+    border-radius: 6px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.message{
+    color: black;
+    text-align: center;
+    background-color: lightgoldenrodyellow;
+    line-height: 30px;
+    font-size: 18px;
+    margin-top: 10px;
+}
