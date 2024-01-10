@@ -6,27 +6,28 @@ function App() {
 
     const [events, setEvents] = useState([])
 
-    useEffect(() => {
-        fetch('http://localhost:8080/events')
+    function exmapleFunction() {
+        fetch('http://localhost:8080/events', {method:'post', body:{}})
             .then(response => {
                 if (!response.ok) {
                     // console.log("events reponse not ok")
-                    throw json(
-                        {message: 'Could not fetch events.'},
-                        {
-                            status: 500,
-                        }
-                    );
+                    throw json({message: 'Could not fetch events.'}, {status: 500,});
                 } else {
                     // console.log("events reponse ok: ")
                     return response.json();
                 }
-            }).then(resData => {
-                setEvents(resData.events)
+            }).then(body => {
+                setEvents(body.events)
+            }
+        ).catch(
+            error =>{
+                console.log(error)
             }
         )
-    }, [])
-    console.log(events)
+    }
+
+    useEffect(exmapleFunction, []);
+    // console.log(events)
 
     return <ul>
         {events.map((event) => (
